@@ -2,20 +2,20 @@
 
 departments
 -
-id SERIAL PK
-dept_no VARCHAR
+id SERIAL
+dept_no VARCHAR PK
 dept_name VARCHAR
 
 titles
 -
-id SERIAL PK
-title_id VARCHAR
+id SERIAL
+title_id VARCHAR PK
 title VARCHAR
 
 employees
 -
-id SERIAL PK
-emp_no INTEGER
+id SERIAL
+emp_no VARCHAR PK
 emp_title_id VARCHAR FK >- titles.title_id
 birth_date DATE 
 first_name VARCHAR
@@ -26,18 +26,18 @@ hire_date DATE
 dept_emp
 -
 id SERIAL PK
-emp_no INT FK >- employees.emp_no
+emp_no VARCHAR FK >- employees.emp_no
 dept_name VARCHAR
 
 dept_manager
 -
 id SERIAL PK
 dept_no VARCHAR FK >- departments.dept_no
-emp_no INTEGER FK >- employees.emp_no
+emp_no VARCHAR FK >- employees.emp_no
 
 
 salaries
 -
 id SERIAL PK
-emp_no INTEGER FK >- employees.emp_no
+emp_no VARCHAR FK >- employees.emp_no
 salary INTEGER
