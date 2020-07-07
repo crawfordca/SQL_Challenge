@@ -21,13 +21,12 @@ CREATE TABLE titles (
 CREATE TABLE employees (
 	id SERIAL PRIMARY KEY,
 	emp_no INTEGER NOT NULL,
-	emp_title_id VARCHAR NOT NULL,
+	emp_title_id VARCHAR REFERENCES titles(title_id),
 	birth_date DATE,
 	first_name VARCHAR,
 	last_name VARCHAR,
 	sex TEXT,
-	hire_date DATE,
-	FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
+	hire_date DATE
 );
 
 
