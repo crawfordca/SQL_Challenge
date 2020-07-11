@@ -27,7 +27,7 @@ dept_emp
 -
 id SERIAL PK
 emp_no VARCHAR FK >- employees.emp_no
-dept_name VARCHAR
+dept_no VARCHAR FK >- departments.dept_no
 
 dept_manager
 -
